@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دعوة فاطمة وعمر</title>
+
+    <meta property="og:title" content="دعوة زواج فاطمة وعمر">
+    <meta property="og:description" content="يسعدنا حضوركم وتشريفكم لنا في ليلة العمر.. اضغطي لتأكيد الحضور">
+    <meta property="og:image" content="https://i.postimg.cc/hvxMMfxQ/dwt-zfaf-blwn-wrdy-wedding-invitation.png">
+    <meta property="og:url" content="https://maryamjsh.github.io/fff/">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { background-color: #f4f1ea; margin: 0; font-family: 'Tajawal', sans-serif; display: flex; justify-content: center; padding: 20px 0; }
         .main-container { max-width: 450px; width: 100%; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border-radius: 15px; overflow: hidden; padding-bottom: 30px; }
         .invitation-img { width: 100%; display: block; }
         
-        /* تنسيق جملة تأكيد الحضور كزر قابل للضغط */
         .rsvp-toggle-btn {
             font-family: 'Amiri', serif;
             color: #d4af37;
@@ -23,12 +29,7 @@
         }
         .rsvp-toggle-btn:hover { border-bottom-color: #d4af37; transform: scale(1.05); }
 
-        /* إخفاء جزئية النموذج في البداية */
-        #rsvp-form-container {
-            display: none; /* مخفي افتراضياً */
-            padding: 0 20px;
-            animation: fadeIn 0.5s ease-in;
-        }
+        #rsvp-form-container { display: none; padding: 0 20px; animation: fadeIn 0.5s ease-in; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -47,7 +48,7 @@
 <body>
 
 <div class="main-container">
-    <img src="https://i.postimg.cc/hvxMMfxQ/dʿwt-zfaf-blwn-wrdy-wedding-invitation.png" class="invitation-img">
+    <img src="https://i.postimg.cc/hvxMMfxQ/dwt-zfaf-blwn-wrdy-wedding-invitation.png" class="invitation-img">
 
     <div class="rsvp-toggle-btn" onclick="toggleRSVP()">تأكيد الحضور</div>
 
@@ -72,7 +73,6 @@
         var form = document.getElementById("rsvp-form-container");
         if (form.style.display === "none" || form.style.display === "") {
             form.style.display = "block";
-            // تمرير الصفحة للأسفل لتظهر الخانات بوضوح
             form.scrollIntoView({ behavior: 'smooth' });
         } else {
             form.style.display = "none";
